@@ -1,5 +1,6 @@
 int once=0; /*正緣觸發*/
 int now=0;  /*當前亮暗*/
+
 void setup() {
   pinMode(13,INPUT);
   pinMode(12,OUTPUT);
