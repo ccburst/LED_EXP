@@ -2,7 +2,9 @@ int once=0; /*正緣觸發*/
 int now=0;  /*當前亮暗*/
 
 void setup() {
+  Serial.begin(9600);
   pinMode(13,INPUT);
+  pinMode(11,INPUT);
   pinMode(12,OUTPUT);
   digitalWrite(12,now);
 }
@@ -18,4 +20,5 @@ void loop() {
   else{
     once=0;  /*放開按鈕時重設once*/
   }
+  Serial.println(digitalRead(11)); /*監測output輸出值*/
 }
